@@ -21,4 +21,8 @@ public class Ingredient implements Serializable {
     private BigDecimal amount;
     @ManyToOne
     private Recipe recipe;
+    
+    @OneToOne
+    @JoinColumn(name = "uom_id", referencedColumnName = "id")
+    private UnitOfMeasure uom;
 }
