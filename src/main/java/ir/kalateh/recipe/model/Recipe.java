@@ -47,6 +47,10 @@ public class Recipe implements Serializable {
     @Lob
     private Byte[] image;
     
+    @Enumerated
+    @Column(columnDefinition = "smallint")
+    private Difficulty difficulty;
+    
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "recipe")
     @PrimaryKeyJoinColumn
     private Note notes;
