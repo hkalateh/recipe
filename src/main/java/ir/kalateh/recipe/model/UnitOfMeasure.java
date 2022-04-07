@@ -21,5 +21,5 @@ public class UnitOfMeasure implements Serializable {
     private Long id;
     
     @Column(name = "unit_of_measure")
-    private String description;
+    private String uom;
 }
