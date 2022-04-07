@@ -1,0 +1,10 @@
+insert into CATEGORY(DESCRIPTION) values ('persian');
+insert into CATEGORY(DESCRIPTION) values ('italian');
+insert into CATEGORY(DESCRIPTION) values ('chiness');
+insert into CATEGORY(DESCRIPTION) values ('mexican');
+insert into CATEGORY(DESCRIPTION) values ('american');
+insert into unit_of_measure(unit_of_measure) values ('cup');
+insert into unit_of_measure(unit_of_measure) values ('teaSpoon');
+insert into unit_of_measure(unit_of_measure) values ('tableSpoon');
+insert into unit_of_measure(unit_of_measure) values ('pinch');
+insert into unit_of_measure(unit_of_measure) values ('Ounce');
