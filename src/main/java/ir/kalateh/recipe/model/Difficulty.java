@@ -6,8 +6,9 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum Difficulty {
+    EASY,MODERATE,HARD
     
-    EASY(0, "EASY", "آسان"),
+    /*EASY(0, "EASY", "آسان"),
     MODERATE(1, "MODERATE", "معمولی"),
     HARD(2, "HARD", "سخت");
     
@@ -21,5 +22,5 @@ public enum Difficulty {
                 return difficulty;
         }
         return null;
-    }
+    }*/
 }

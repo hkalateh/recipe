@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -39,7 +40,8 @@ public class Recipe implements Serializable {
     
     @Column(name = "url")
     private String url;
-    
+
+    @Lob
     @Column(name = "directions")
     private String directions;
     
@@ -47,8 +49,8 @@ public class Recipe implements Serializable {
     @Lob
     private Byte[] image;
     
-    @Enumerated
-    @Column(columnDefinition = "smallint")
+    @Enumerated(EnumType.STRING)
+//    @Column(columnDefinition = "smallint")
     private Difficulty difficulty;
     
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "recipe")
@@ -56,11 +58,23 @@ public class Recipe implements Serializable {
     private Note notes;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
-    private Set<Ingredient> ingredients;
+    private Set<Ingredient> ingredients = new HashSet<>();
     
     @ManyToMany
     @JoinTable(name = "recipe_category",
             joinColumns = @JoinColumn(name = "recipe_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "category_id", referencedColumnName = "id"))
-    private Set<Category> categories;
+    private Set<Category> categories = new HashSet<>();
+
+    public void setNotes(Note note) {
+        this.notes = note;
+        note.setRecipe(this);
+    }
+
+    public void addIngredients(Ingredient ingredient) {
+        ingredient.setRecipe(this);
+        this.ingredients.add(ingredient);
+//        return this;
+    }
+
 }

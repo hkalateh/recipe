@@ -6,5 +6,21 @@
 </head>
 <body>
     <h1>my recipe</h1>
+<table>
+    <tr>
+        <th>description</th>
+        <th>direction</th>
+        <th>note</th>
+        <th>prep time</th>
+        <th>cook time</th>
+    </tr>
+    <tr th:each="recipe : ${recipes}">
+        <td th:text="${recipe.getDescription()}">description</td>
+        <td th:text="${recipe.getDirections()}">direction</td>
+        <td th:text="${recipe.getNotes().getRecipeNote()}">note</td>
+        <td th:text="${recipe.getPrepTime()}">prep time</td>
+        <td th:text="${recipe.getCookTime()}">cook time</td>
+    </tr>
+</table>
 </body>
 </html>

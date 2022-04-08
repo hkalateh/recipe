@@ -1,6 +1,8 @@
 package ir.kalateh.recipe.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,6 +11,7 @@ import java.math.BigDecimal;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @Table(name = "Ingredient")
 @Entity
 public class Ingredient implements Serializable {
@@ -25,4 +28,10 @@ public class Ingredient implements Serializable {
     @OneToOne
     @JoinColumn(name = "uom_id", referencedColumnName = "id")
     private UnitOfMeasure uom;
+
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure uom) {
+        this.description = description;
+        this.amount = amount;
+        this.uom = uom;
+    }
 }

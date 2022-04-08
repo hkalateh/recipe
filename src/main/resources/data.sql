@@ -1,10 +1,15 @@
-insert into CATEGORY(DESCRIPTION) values ('persian');
+insert into CATEGORY(DESCRIPTION) values ('west asian');
 insert into CATEGORY(DESCRIPTION) values ('italian');
-insert into CATEGORY(DESCRIPTION) values ('chiness');
+insert into CATEGORY(DESCRIPTION) values ('chinese');
 insert into CATEGORY(DESCRIPTION) values ('mexican');
 insert into CATEGORY(DESCRIPTION) values ('american');
 insert into unit_of_measure(unit_of_measure) values ('cup');
 insert into unit_of_measure(unit_of_measure) values ('teaSpoon');
 insert into unit_of_measure(unit_of_measure) values ('tableSpoon');
-insert into unit_of_measure(unit_of_measure) values ('pinch');
+insert into unit_of_measure(unit_of_measure) values ('dash');
 insert into unit_of_measure(unit_of_measure) values ('Ounce');
+insert into unit_of_measure(unit_of_measure) values ('each');
+insert into unit_of_measure(unit_of_measure) values ('bunch');
+insert into unit_of_measure(unit_of_measure) values ('clove');
+insert into unit_of_measure(unit_of_measure) values ('large');
+insert into unit_of_measure(unit_of_measure) values ('stalk');

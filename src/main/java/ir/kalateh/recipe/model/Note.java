@@ -28,4 +28,5 @@ public class Note implements Serializable {
     @Lob
     @Column(name = "recipe_note")
     private String recipeNote;
+
 }
